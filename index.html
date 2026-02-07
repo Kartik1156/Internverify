@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InternVerify</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">🛡️ <span>InternVerify</span></div>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#features">Features</a>
+    <a href="#verify">Verify</a>
+    <button class="btn-primary">Get Started</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="badge">AI-Powered Verification</span>
+  <h1>Verify Internship Offers<br/>Before You Trust Them</h1>
+  <p>
+    Every year, thousands of students fall victim to fake internship offers. InternVerify 
+    uses AI to analyze messages, emails, and offer letters to help you distinguish real 
+    opportunities from scams.
+  </p>
+
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="scrollToVerify()">Verify Now →</button>
+    <button class="btn-secondary" onclick="scrollToHow()">Learn How It Works</button>
+  </div>
+
+  <div class="hero-points">
+    <span>• Free to Use</span>
+    <span>• No Sign-up Required</span>
+    <span>• Instant Results</span>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <span class="section-tag">HOW IT WORKS</span>
+  <h2>Four Simple Steps to Verify</h2>
+  <p class="section-desc">
+    Our streamlined process makes it easy to check any internship offer in seconds.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <span class="step">01</span>
+      <h3>Upload Message</h3>
+      <p>Paste the internship message or upload the offer letter you received via email, WhatsApp, or social media.</p>
+    </div>
+    <div class="card">
+      <span class="step">02</span>
+      <h3>AI Analyzes Content</h3>
+      <p>Our AI engine examines the language, structure, sender details, and common patterns used in scam messages.</p>
+    </div>
+    <div class="card">
+      <span class="step">03</span>
+      <h3>Scam Patterns Detected</h3>
+      <p>The system cross-references known scam indicators like urgency tactics, fee requests, and suspicious domains.</p>
+    </div>
+    <div class="card">
+      <span class="step">04</span>
+      <h3>Final Verdict Shown</h3>
+      <p>Get a clear trust score and detailed explanation of why the offer appears genuine, suspicious, or fake.</p>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section gray">
+  <span class="section-tag">FEATURES</span>
+  <h2>Built to Protect Students</h2>
+  <p class="section-desc">
+    InternVerify combines cutting-edge AI with student-centered design to provide the most reliable internship verification experience.
+  </p>
+
+  <div class="cards grid-3">
+    <div class="card">
+      <h3>AI Powered Analysis</h3>
+      <p>Advanced machine learning models trained on thousands of real and fake internship communications.</p>
+    </div>
+    <div class="card">
+      <h3>Scam Pattern Detection</h3>
+      <p>Identifies common red flags like upfront payment requests, suspicious email domains, and urgency tactics.</p>
+    </div>
+    <div class="card">
+      <h3>Clear Explanations</h3>
+      <p>Every analysis comes with human-readable explanations so you understand exactly why an offer is flagged.</p>
+    </div>
+    <div class="card">
+      <h3>Student Friendly Interface</h3>
+      <p>Designed specifically for students with a simple, intuitive interface that requires no technical knowledge.</p>
+    </div>
+    <div class="card">
+      <h3>Multi-Platform Support</h3>
+      <p>Analyze messages from any platform including email, WhatsApp, Telegram, LinkedIn, and social media.</p>
+    </div>
+    <div class="card">
+      <h3>Private & Secure</h3>
+      <p>Your data is never stored or shared. All analysis happens in real-time and is discarded after results are shown.</p>
+    </div>
+  </div>
+</section>
+
+<section id="verify" class="section">
+  <span class="section-tag">VERIFY NOW</span>
+  <h2>Check Your Offer</h2>
+  <p class="section-desc">
+    Paste the internship message you received or upload the offer letter. Our AI will analyze it instantly.
+  </p>
+
+  <div class="verify-box">
+    <div class="input-group">
+      <label>Paste Internship Message</label>
+      <textarea placeholder="Paste the internship offer message, email content, or any communication you want to verify..."></textarea>
+    </div>
+    
+    <div class="divider">OR UPLOAD A FILE</div>
+    
+    <div class="upload-box" id="drop-zone">
+      <div class="upload-icon">📤</div>
+      Click to upload<br/>
+      <small>PDF or DOC files up to 5MB</small>
+    </div>
+    <button class="btn-primary full" id="analyze-btn">Analyze Offer</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="logo">🛡️ <span>InternVerify</span></div>
+    <p>Helping students make informed decisions about internship offers using AI-powered analysis.</p>
+    <nav class="footer-links">
+      <a href="#how">How It Works</a>
+      <a href="#features">Features</a>
+      <a href="#verify">Verify</a>
+    </nav>
+    <hr>
+    <p class="credits">Built by Team InternVerify</p>
+    <p class="disclaimer">Disclaimer: This tool assists decision-making and does not guarantee absolute accuracy. Always verify through official channels.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
