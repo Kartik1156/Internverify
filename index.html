@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>InternVerify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">InternVerify</div>
+        <ul class="navlinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#verify">Verify</a></li>
+            <li><a href="#result">Result</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="container hero-inner">
+        <div class="hero-card">
+            <h1>InternVerify</h1>
+            <p class="lead">Verify internship offers and spot scams before replying.</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="scrollToVerify()">Verify Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Verify -->
+<section class="verify" id="verify">
+    <div class="container">
+        <div class="card">
+            <h2>Paste Internship Message</h2>
+            <textarea id="message" placeholder="Paste email / WhatsApp / Telegram internship message..."></textarea>
+            <button class="btn btn-primary" onclick="verifyOffer()">Analyze Offer</button>
+        </div>
+    </div>
+</section>
+
+<!-- Result -->
+<section class="result" id="result">
+    <div class="container">
+        <div class="card">
+            <h2>Verification Result</h2>
+            <div id="verdict" class="verdict">—</div>
+
+            <div class="progress">
+                <div id="bar"></div>
+            </div>
+
+            <p id="score">Trust Score: 0%</p>
+            <ul id="reasons" class="reasons"></ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    Built for Hyperspace Innovation Hackathon 2K26
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

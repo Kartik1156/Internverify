@@ -1,0 +1,150 @@
+:root{
+    --bg: #07070a;
+    --panel: #0b1220;
+    --card: rgba(255,255,255,0.02);
+    --muted: #9aa3bd;
+    --blue-400: #60a5fa;
+    --blue-600: #2563eb;
+    --blue-700: #1e40af;
+    --accent: linear-gradient(90deg,var(--blue-600),var(--blue-700));
+    --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg);
+    color: #e6eefb;
+    -webkit-font-smoothing:antialiased;
+    scroll-behavior:smooth;
+    position:relative;
+    overflow-x:hidden;
+}
+
+/* Subtle decorative gradients to replace a flat black background */
+body::before, body::after{
+    content:"";position:fixed;pointer-events:none;z-index:0;filter:blur(64px);opacity:0.45;
+}
+body::before{
+    width:640px;height:640px;right:-140px;top:-100px;
+    background:radial-gradient(circle at 30% 30%, rgba(37,99,235,0.18), rgba(37,99,235,0.06));
+}
+body::after{
+    width:420px;height:420px;left:-80px;bottom:-120px;
+    background:radial-gradient(circle at 70% 70%, rgba(14,165,233,0.12), rgba(14,165,233,0.03));
+}
+
+/* Layout helpers */
+.container{max-width:1100px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+
+/* Navbar */
+.navbar{position:sticky;top:0;background:transparent;padding:16px 0}
+.navbar .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;color:var(--blue-400);font-size:20px}
+.navlinks{list-style:none;display:flex;gap:20px}
+.navlinks a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
+.navlinks a:hover{color:white;background:rgba(255,255,255,0.02)}
+
+/* Hero */
+.hero{padding:72px 0 36px}
+.hero-inner{display:flex;align-items:center;justify-content:center}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:44px;border-radius:14px;box-shadow:0 12px 36px rgba(2,6,23,0.6);max-width:900px;text-align:center;border:1px solid rgba(255,255,255,0.03)}
+.hero-card h1{font-size:42px;margin-bottom:8px;color:var(--blue-400);letter-spacing:0.2px}
+.hero-card .lead{color:var(--muted);margin-bottom:18px;font-size:15px}
+.hero-cta{display:flex;justify-content:center}
+
+/* Sections */
+section{padding:56px 0}
+
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);max-width:720px;margin:0 auto}
+
+/* Inputs */
+textarea{width:100%;min-height:150px;padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);resize:vertical;font-size:15px;color:var(--muted);background:transparent}
+
+/* Buttons */
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:none;font-weight:600;cursor:pointer}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 12px 30px rgba(37,99,235,0.14)}
+.btn-primary:hover{transform:translateY(-2px);transition:all .16s ease}
+
+/* Result */
+.verdict{font-size:20px;font-weight:700;text-align:center;margin:10px 0;color:white}
+.progress{height:14px;background:rgba(255,255,255,0.03);border-radius:10px;overflow:hidden;margin:12px 0}
+#bar{height:100%;width:0%;transition:width .9s ease,background .3s ease}
+/* Use blue for positive/genuine, keep others */
+#bar.genuine{background:linear-gradient(90deg,#3b82f6,#2563eb)}
+#bar.suspicious{background:linear-gradient(90deg,#f59e0b,#f97316)}
+#bar.fake{background:linear-gradient(90deg,#ef4444,#dc2626)}
+
+.reasons{margin-top:10px;color:var(--muted);list-style:none;padding-left:0}
+.reasons li{padding:6px 0}
+
+footer{text-align:center;padding:36px 20px;color:var(--muted);font-size:13px}
+
+/* Responsive */
+@media (max-width:768px){
+    .hero-card{padding:22px}
+    .hero-card h1{font-size:28px}
+    .navlinks{display:none}
+}
+
+/* Professional black-shade refinements */
+:root{
+    --black-900: #030306;
+    --black-800: #07080b;
+    --black-700: #0c0f15;
+    --surface-600: rgba(255,255,255,0.02);
+}
+
+body{
+    /* layered dark base using different black shades */
+    background-color: var(--black-900);
+    background-image:
+        radial-gradient(600px 400px at 85% 10%, rgba(37,99,235,0.12), transparent 20%),
+        radial-gradient(420px 320px at 10% 90%, rgba(14,165,233,0.08), transparent 18%),
+        linear-gradient(180deg, var(--black-800), var(--black-700));
+}
+
+/* subtle diagonal texture for professional depth */
+body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.003) 0 1px, transparent 1px 10px);
+    opacity:0.6;mix-blend-mode:overlay;filter:blur(8px);
+}
+
+.hero-card, .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.018), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.logo{color:var(--blue-400);letter-spacing:0.3px}
+
+.navlinks a{color:rgba(229,233,255,0.85)}
+
+.hero-card h1{color: #dbeafe}
+.hero-card .lead{color:var(--muted)}
+
+/* Card header accent */
+.card h2{color:#e6f0ff;margin-bottom:10px}
+
+/* Input focus polish */
+textarea:focus{outline:none;box-shadow:0 6px 24px rgba(37,99,235,0.12);border-color:rgba(37,99,235,0.18)}
+
+.btn-primary{background: linear-gradient(90deg,#2b6ef6,#1e40af);box-shadow:0 12px 36px rgba(30,64,175,0.14)}
+
+/* subtle top border accent on hero */
+.hero-card{border-top:4px solid rgba(37,99,235,0.12)}
+
+/* slightly stronger shadows to lift content */
+.card{box-shadow:0 18px 50px rgba(2,6,23,0.7)}
+
+/* progress bar refined */
+#bar{border-radius:8px}
+
+/* footer muted and centered */
+footer{color:rgba(170,186,210,0.7)}
+
+@media (max-width:480px){
+    .container{padding:0 14px}
+    .hero-card h1{font-size:24px}
+}
